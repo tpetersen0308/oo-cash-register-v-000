@@ -4,7 +4,7 @@ class CashRegister
 
   def initialize(employee_discount = 0)
     @total = 0
-    @discount = employee_discount.to_int
+    @discount = employee_discount
     @items = []
   end
 
@@ -29,7 +29,7 @@ class CashRegister
       "After the discount, the total comes to $#{@total.to_int}."
     end
   end
-    
+
 #    discount = 0.01*@discount*@price*@quantity
 #    @total -= discount
 #    @discount == 0 ? "There is no discount to apply." : "After the discount, the total comes to $#{@total.to_int}."
