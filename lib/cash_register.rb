@@ -17,7 +17,6 @@ class CashRegister
       counter += 1
     end
     @total += @price*@quantity
-    #puts self.apply_discount
   end
 
   def apply_discount
@@ -30,13 +29,8 @@ class CashRegister
     end
   end
 
-#    discount = 0.01*@discount*@price*@quantity
-#    @total -= discount
-#    @discount == 0 ? "There is no discount to apply." : "After the discount, the total comes to $#{@total.to_int}."
-#  end
-
   def void_last_transaction
-
+    @total -= @price*@quantity
   end
 
 end
