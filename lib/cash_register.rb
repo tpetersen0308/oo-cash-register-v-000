@@ -21,7 +21,8 @@ class CashRegister
   end
 
   def apply_discount
-    @total -= @price*@quantity*@discount*0.01
+    discount = 0.01*@discount*@price*@quantity
+    @total -= discount
     @discount == 0 ? "There is no discount to apply." : "After the discount, the total comes to $#{@total}."
   end
 
